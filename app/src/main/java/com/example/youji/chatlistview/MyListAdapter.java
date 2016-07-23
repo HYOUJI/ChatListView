@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class MyListAdapter extends BaseAdapter {
 
-    List<ListItem> items = new ArrayList<>();
+    List<ListItem> items = new ArrayList<ListItem>();
 
     public void add(String name, int profileImage){
         ListItem item = new ListItem();

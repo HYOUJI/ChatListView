@@ -23,6 +23,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_vertical"
             android:text="NAME"
+            android:textColor="#000000"
             android:id="@+id/nameView" />
 
     </LinearLayout>

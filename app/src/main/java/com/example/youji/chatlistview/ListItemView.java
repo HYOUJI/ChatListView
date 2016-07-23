@@ -19,15 +19,15 @@ public class ListItemView extends LinearLayout {
     }
 
     private void init(){
-        // layout ÁöÁ¤
+        // layout ì§€ì •
         inflate(getContext(), R.layout.item_view, this);
 
-        // view ÃÊ±âÈ­
+        // view ì´ˆê¸°í™”
         profileView = (ImageView) findViewById(R.id.profileImageView);
         nameView = (TextView) findViewById(R.id.nameView);
     }
 
-    // listView ¼¼ÆÃ
+    // listView ì„¸íŒ…
     public void setItem(ListItem item){
         nameView.setText(item.name);
         profileView.setImageResource(item.profileImage);

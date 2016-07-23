@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.myListView);
         // Adapter Initialize
         myAdapter = new MyListAdapter();
-        // listView¿¡ AdapterÇÒ´ç
+        // listViewì— Adapterí• ë‹¹
         listView.setAdapter(myAdapter);
 
         // ListView Clicked
@@ -32,25 +32,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, ChatMainActivity.class);
-
                 startActivity(intent);
             }
         });
 
-        // Ã¤ÆÃ¸ñ·Ï ¼¼ÆÃ
-        myAdapter.add("È²À¯Áö", R.mipmap.ic_launcher);
-        myAdapter.add("±èÀÍÈ¯", R.mipmap.ic_launcher);
-        myAdapter.add("ÀÌ¿ø°æ", R.mipmap.ic_launcher);
-        myAdapter.add("Á¶À±¹Î", R.mipmap.ic_launcher);
-        myAdapter.add("ÃÖ¿µ¼­", R.mipmap.ic_launcher);
-        myAdapter.add("ÀÌ¿Ï¹Î", R.mipmap.ic_launcher);
-        myAdapter.add("±è¹ÎÁ¤", R.mipmap.ic_launcher);
-        myAdapter.add("ÀÌÁö¼ö", R.mipmap.ic_launcher);
-        myAdapter.add("È²ÂĞ", R.mipmap.ic_launcher);
-        myAdapter.add("È²Äá", R.mipmap.ic_launcher);
-        myAdapter.add("Á¤¼ø¿ø", R.mipmap.ic_launcher);
-        myAdapter.add("ÀÌ¼öÁø", R.mipmap.ic_launcher);
-        myAdapter.add("±èµ¿ÇÏ", R.mipmap.ic_launcher);
+        // ì±„íŒ…ëª©ë¡ ì„¸íŒ…
+        myAdapter.add("í™©ìœ ì§€", R.mipmap.ic_launcher);
+        myAdapter.add("ê¹€ìµí™˜", R.mipmap.ic_launcher);
+        myAdapter.add("ì´ì›ê²½", R.mipmap.ic_launcher);
+        myAdapter.add("ì¡°ìœ¤ë¯¼", R.mipmap.ic_launcher);
+        myAdapter.add("ìµœì˜ì„œ", R.mipmap.ic_launcher);
+        myAdapter.add("ì´ì™„ë¯¼", R.mipmap.ic_launcher);
+        myAdapter.add("ê¹€ë¯¼ì •", R.mipmap.ic_launcher);
+        myAdapter.add("ì´ì§€ìˆ˜", R.mipmap.ic_launcher);
+        myAdapter.add("í™©ì«‘", R.mipmap.ic_launcher);
+        myAdapter.add("í™©ì½©", R.mipmap.ic_launcher);
+        myAdapter.add("ì •ìˆœì›", R.mipmap.ic_launcher);
+        myAdapter.add("ì´ìˆ˜ì§„", R.mipmap.ic_launcher);
+        myAdapter.add("ê¹€ë™í•˜", R.mipmap.ic_launcher);
+
     }
 
 }
