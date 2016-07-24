@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by YouJi on 2016-07-22.
@@ -17,7 +18,8 @@ public class ChatMainActivity extends AppCompatActivity {
 
     ListView chatListView;
     EditText inputView;
-    Button sendBtn;
+    TextView chatName;
+    Button sendBtn, finishBtn;
 
     ChatListAdapter myChatAdapter;
 
@@ -25,8 +27,6 @@ public class ChatMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_activity_main);
-
-        //Intent receiveIntent = getIntent();
 
         // View Initailize
         chatListView = (ListView) findViewById(R.id.chatListView);
@@ -36,6 +36,15 @@ public class ChatMainActivity extends AppCompatActivity {
         myChatAdapter = new ChatListAdapter();
         chatListView.setAdapter(myChatAdapter);
 
+
+        chatName = (TextView) findViewById(R.id.chatName);
+        finishBtn = (Button) findViewById(R.id.finishBtn);
+
+        Intent receiveIntent = getIntent();
+        String chatNameStr = receiveIntent.getStringExtra("채팅방이름");
+
+        chatName.setText(chatNameStr);
+
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +53,13 @@ public class ChatMainActivity extends AppCompatActivity {
                 inputView.setText("");
 
                 chatListView.smoothScrollToPosition(myChatAdapter.getCount());
+            }
+        });
+
+        finishBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

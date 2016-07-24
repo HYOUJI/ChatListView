@@ -17,7 +17,7 @@ public class ChatListAdapter extends BaseAdapter {
     public void add(String message) {
         chatItems.add(message);
 
-        //È­¸é °»½Å
+        //í™”ë©´ ê°±ì‹ 
         notifyDataSetChanged();
     }
 

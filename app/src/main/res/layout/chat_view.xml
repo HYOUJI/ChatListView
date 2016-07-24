@@ -12,6 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_gravity="right"
         android:text="Message"
+        android:background="@drawable/bubble"
         android:id="@+id/messageView" />
-    <!--android:background="@drawable/bubble"-->
+
 </LinearLayout>

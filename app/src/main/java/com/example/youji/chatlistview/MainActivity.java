@@ -31,10 +31,15 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String clickedUserName = (String)myAdapter.getItem(position);
                 Intent intent = new Intent(MainActivity.this, ChatMainActivity.class);
+
+                intent.putExtra("채팅방이름", clickedUserName);
+
                 startActivity(intent);
             }
         });
+
 
         // 채팅목록 세팅
         myAdapter.add("황유지", R.mipmap.ic_launcher);
