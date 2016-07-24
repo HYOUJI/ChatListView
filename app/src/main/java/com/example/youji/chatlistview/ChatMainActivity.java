@@ -28,6 +28,9 @@ public class ChatMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_activity_main);
 
+        Intent receiveIntent = getIntent();
+        String chatNameStr = receiveIntent.getStringExtra("ChatFriend");
+
         // View Initailize
         chatListView = (ListView) findViewById(R.id.chatListView);
         inputView = (EditText) findViewById(R.id.inputView);
@@ -39,9 +42,6 @@ public class ChatMainActivity extends AppCompatActivity {
 
         chatName = (TextView) findViewById(R.id.chatName);
         finishBtn = (Button) findViewById(R.id.finishBtn);
-
-        Intent receiveIntent = getIntent();
-        String chatNameStr = receiveIntent.getStringExtra("채팅방이름");
 
         chatName.setText(chatNameStr);
 

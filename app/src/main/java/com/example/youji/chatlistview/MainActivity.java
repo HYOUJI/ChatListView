@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         // ListView Clicked
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String clickedUserName = (String)myAdapter.getItem(position);
-                Intent intent = new Intent(MainActivity.this, ChatMainActivity.class);
 
-                intent.putExtra("채팅방이름", clickedUserName);
+                Intent intent = new Intent(MainActivity.this, ChatMainActivity.class);
+                String clickedUserName = myAdapter.getItem(position).name;
+
+                intent.putExtra("ChatFriend", clickedUserName);
 
                 startActivity(intent);
             }
@@ -42,19 +44,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         // 채팅목록 세팅
-        myAdapter.add("황유지", R.mipmap.ic_launcher);
-        myAdapter.add("김익환", R.mipmap.ic_launcher);
-        myAdapter.add("이원경", R.mipmap.ic_launcher);
-        myAdapter.add("조윤민", R.mipmap.ic_launcher);
-        myAdapter.add("최영서", R.mipmap.ic_launcher);
-        myAdapter.add("이완민", R.mipmap.ic_launcher);
-        myAdapter.add("김민정", R.mipmap.ic_launcher);
-        myAdapter.add("이지수", R.mipmap.ic_launcher);
-        myAdapter.add("황쫑", R.mipmap.ic_launcher);
-        myAdapter.add("황콩", R.mipmap.ic_launcher);
-        myAdapter.add("정순원", R.mipmap.ic_launcher);
-        myAdapter.add("이수진", R.mipmap.ic_launcher);
-        myAdapter.add("김동하", R.mipmap.ic_launcher);
+        myAdapter.add("Youji", R.mipmap.ic_launcher);
+        myAdapter.add("Ikhwan", R.mipmap.ic_launcher);
+        myAdapter.add("MANGOS", R.mipmap.ic_launcher);
+        myAdapter.add("Wonkyeong", R.mipmap.ic_launcher);
+        myAdapter.add("Yoonmin", R.mipmap.ic_launcher);
+        myAdapter.add("Youngseo", R.mipmap.ic_launcher);
+        myAdapter.add("Wanmin", R.mipmap.ic_launcher);
+        myAdapter.add("Mindung", R.mipmap.ic_launcher);
+        myAdapter.add("JJong", R.mipmap.ic_launcher);
+        myAdapter.add("Kong", R.mipmap.ic_launcher);
+        myAdapter.add("ssonwon", R.mipmap.ic_launcher);
+        myAdapter.add("taco", R.mipmap.ic_launcher);
+        myAdapter.add("hello", R.mipmap.ic_launcher);
 
     }
 
